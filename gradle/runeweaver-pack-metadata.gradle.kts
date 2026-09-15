@@ -7,6 +7,7 @@ val packMetadata = when (minecraftVersion) {
     "1.20.1" -> "\"pack_format\": 15,"
     "1.21.1" -> "\"pack_format\": 34,"
     "26.1", "26.1.2" -> "\"min_format\": 84,\n    \"max_format\": 84,"
+    "26.2" -> "\"min_format\": 88,\n    \"max_format\": 88,"
     else -> error("Unsupported Minecraft resource-pack version: $minecraftVersion")
 }
 

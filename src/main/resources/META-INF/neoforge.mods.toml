@@ -7,7 +7,7 @@ issueTrackerURL = "https://github.com/Rasa-Novum/runeweaver/issues"
 modId = "runeweaver"
 version = "${version}"
 displayName = "Runeweaver"
-logoFile = "logo.png"
+${icon_property} = "logo.png"
 authors = "Ramixin, xameryn"
 description = '''
 Allows in-code manipulation of asset/data resources

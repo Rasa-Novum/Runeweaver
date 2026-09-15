@@ -4,13 +4,14 @@
 
 A simple lightweight library for modded Minecraft that allows `.json` resource files to be modified, created, or deleted at runtime through an event-based system.
 
-This is a fork of the original [Mixson](https://modrinth.com/mod/mixson) by [Ramixin](https://github.com/Ramixin). This version has been refactored for multi-loader (Fabric, Forge, NeoForge) and multi-version (26.1.2, 1.21.1, 1.20.1) support using [Stonecutter](https://stonecutter.kikugie.dev/) to provide a stable cross-loader & cross-version API for [our mods](https://github.com/Rasa-Novum/).
+This is a fork of the original [Mixson](https://modrinth.com/mod/mixson) by [Ramixin](https://github.com/Ramixin). This version has been refactored for multi-loader (Fabric, Forge, NeoForge) and multi-version (26.2, 26.1.x, 1.21.1, 1.20.1) support using [Stonecutter](https://stonecutter.kikugie.dev/) to provide a stable cross-loader & cross-version API for [our mods](https://github.com/Rasa-Novum/).
 
 ---
 
 ## Support
 | MC Version | Fabric Version | Forge Version | NeoForge Version | Quilt Version |
 |:----------:|:--------------:|:-------------:|:----------------:|:-------------:|
+|    26.2    |   ✅    |       ❌       |        ✅         |       ❌       |
 |   26.1.x   |   ✅    |       ❌       |        ✅         |       ❌       |
 |   1.21.1   |   ✅    |       ❌       |        ✅         |       ❌       |
 |   1.20.1   |   ✅    |       ✅       |        ❌         |       ❌       |
@@ -20,10 +21,12 @@ See the wiki for in-depth usage instructions and examples: https://moddedmc.wiki
 
 Check out https://github.com/Ramixin/Mixson for more information.
 
+The `26.1` release jars support Minecraft 26.1, 26.1.1, and 26.1.2 (`>=26.1 <26.2`); 26.2 uses separate jars. Run `.\gradlew.bat buildReleaseArtifacts` to collect the eight release jars in `build/release`. The `26.1.2` targets remain available for patch-version validation and are excluded from release collection.
+
 ### Stonecutter
 - For building, use `.\gradlew.bat :[version]:build`
 - For version switching, use `.\gradlew.bat "Set active project to [version]"`
-  - Versions: `26.1.2-fabric`/`1.21.1-fabric`/`1.20.1-fabric`
+  - Versions: `26.2-fabric`, `26.1-neoforge`, etc.
 - For resetting version state to default, use `.\gradlew.bat "Reset active project"`
 
 ### Implementation

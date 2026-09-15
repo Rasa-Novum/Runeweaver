@@ -27,7 +27,7 @@ val publishCompanion = providers.gradleProperty("publish_runeweaver_rosetta")
     .get()
 val companionTarget = project.name in setOf(
     "1.20.1-fabric", "1.20.1-forge", "1.21.1-fabric",
-    "1.21.1-neoforge", "26.1-fabric", "26.1-neoforge"
+    "1.21.1-neoforge", "26.1-fabric", "26.1-neoforge", "26.2-fabric", "26.2-neoforge"
 )
 val companionEnabled = companionTarget && (rosettaJarPath != null || publishCompanion)
 
@@ -57,7 +57,7 @@ if (companionEnabled) {
     companion.runtimeClasspath += main.runtimeClasspath
     companion.runtimeClasspath += main.output
 
-    val fabricLegacy = project.name.endsWith("-fabric") && !project.name.startsWith("26.1")
+    val fabricLegacy = project.name.endsWith("-fabric") && !project.name.startsWith("26.")
     val loaderConfiguration = if (fabricLegacy) "modImplementation" else "implementation"
     val loaderCompileClasspath = if (fabricLegacy) "modCompileClasspath" else "compileClasspath"
     if (rosettaJarPath != null) {
@@ -73,7 +73,8 @@ if (companionEnabled) {
 
     val properties = mapOf(
         "version" to project.version,
-        "minecraft_version" to project.findProperty("deps.minecraft").toString(),
+        "minecraft_version" to (project.findProperty("deps.minecraft_range")
+            ?: project.findProperty("deps.minecraft")).toString(),
         "loader_version" to (project.findProperty("deps.loader")
             ?: project.findProperty("deps.forge")
             ?: project.findProperty("deps.neoforge")).toString(),

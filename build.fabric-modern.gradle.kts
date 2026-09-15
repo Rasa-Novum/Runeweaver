@@ -40,7 +40,7 @@ tasks.processResources {
 
     val props = mapOf(
         "version" to project.version,
-        "minecraft_version" to prop("deps.minecraft"),
+        "minecraft_version" to (versionProperties.getProperty("deps.minecraft_range") ?: prop("deps.minecraft")),
         "loader_version" to prop("deps.loader"),
         "mixin_compatibility" to prop("mixin_compatibility"),
     )

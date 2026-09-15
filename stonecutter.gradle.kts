@@ -3,16 +3,16 @@ import org.gradle.api.tasks.Delete
 
 plugins {
     id("dev.kikugie.stonecutter")
-    id("fabric-loom") version "1.15.5" apply false
-    id("net.neoforged.moddev") version "2.0.141" apply false
-    id("net.neoforged.moddev.legacyforge") version "2.0.141" apply false
+    id("fabric-loom") version "1.17.20" apply false
+    id("net.neoforged.moddev") version "2.0.147" apply false
+    id("net.neoforged.moddev.legacyforge") version "2.0.147" apply false
 }
 
 stonecutter.active("26.1.2-fabric")
 
 val releaseTargets = listOf(
-    "26.1.2-fabric",
-    "26.1.2-neoforge",
+    "26.2-fabric",
+    "26.2-neoforge",
     "26.1-fabric",
     "26.1-neoforge",
     "1.21.1-fabric",
@@ -26,6 +26,8 @@ val mavenTargets = listOf(
     "1.20.1-forge",
     "1.21.1-fabric",
     "1.21.1-neoforge",
+    "26.2-fabric",
+    "26.2-neoforge",
     "26.1-fabric",
     "26.1-neoforge",
 )

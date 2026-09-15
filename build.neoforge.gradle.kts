@@ -65,6 +65,7 @@ tasks.processResources {
 
     val props = mapOf(
         "version" to project.version,
+        "icon_property" to (if (prop("deps.minecraft") == "26.2") "iconFile" else "logoFile"),
         "minecraft_version" to prop("deps.minecraft"),
         "minecraft_version_range" to prop("deps.minecraft_range"),
         "loader_version" to prop("deps.neoforge"),
