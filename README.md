@@ -1,4 +1,4 @@
-> Active development has moved to Rosetta's **rosetta-resources** and **rosetta-resources-sync** artifacts (0.2.0+). See [Rosetta's module guide](https://github.com/Rasa-Novum/Rosetta_Library/blob/main/docs/MODULES.md) for more info.
+> Active development has moved to Rosetta's **rosetta-resources** and **rosetta-resources-sync** artifacts (0.2.0+). See [Rosetta's module guide](https://github.com/Rasa-Novum/Rosetta_Library/blob/main/docs/README.md) for more info.
 
 <p align="center"><img src="https://i.imgur.com/PWRrgUL.png" alt="Runeweaver logo" width="200">
 
